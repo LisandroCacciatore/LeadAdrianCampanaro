@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Propuesta — Adrián Campanaro</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Auditoría y propuesta de mejora del sitio de Adrián Campanaro, con evidencia medida.">
+<meta name="description" content="Propuesta de sitio nuevo para Adrián Campanaro, con la evidencia medida.">
 <style>
 /* ==========================================================================
    brand/brand.css — FUENTE ÚNICA DE LA IDENTIDAD VISUAL
@@ -449,6 +449,24 @@ li { margin-bottom: var(--space-2); }
   --brand-soft:    #F0F3FD;
 }
 
+/* ---------- El sitio nuevo, mostrado antes que el problema (§3.4) ---------- */
+.shot { border:1px solid var(--line-default); border-radius:var(--radius-lg);
+  overflow:hidden; margin:1rem 0; background:var(--surface-default); }
+.shot-img { display:block; width:100%; height:auto; }
+.shot-frame { display:block; width:100%; height:70vh; min-height:420px; border:0; background:#fff; }
+/* §9.4: toda captura lleva epígrafe — izquierda «Hoy — …», derecha «Nuevo — …». */
+.shot-cap { font-size:var(--fs-sm); color:var(--ink-muted); margin:.5rem 0 0; }
+
+/* ---------- La tabla de colegas pasa a bullets en mobile (§6.2) ---------- */
+@media (max-width:700px){
+  .compare-table thead { display:none; }
+  .compare-table, .compare-table tbody, .compare-table tr, .compare-table td { display:block; width:100%; }
+  .compare-table tr { border:1px solid var(--line-default); border-radius:var(--radius-md);
+    padding:.6rem .8rem; margin-bottom:.6rem; }
+  .compare-table td { border:0; padding:.15rem 0; }
+  .compare-table td:first-child { font-weight:var(--fw-bold); }
+  .compare-table td:not(:first-child)::before { content:attr(data-col) ": "; color:var(--ink-muted); }
+}
 </style>
 </head>
 <body>
@@ -468,99 +486,105 @@ li { margin-bottom: var(--space-2); }
   </div>
 </header>
 
-<!-- ══════════════ A · EL GANCHO ══════════════ -->
+<!-- ══════════════ 1-3 · GANCHO, CONTEXTO Y NÚMEROS ══════════════ -->
 <section class="band band--ink">
   <div class="wrap">
     <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">Propuesta · 5 de octubre de 2026 · válida hasta el 4 de noviembre de 2026</span>
     <h1 class="hero-h1" style="margin-top:1.25rem">Cinco de los seis ofrecen una forma directa de escribirles.<br>El tuyo, ninguna.</h1>
-    <p class="lead" style="color:rgba(255,255,255,.78);max-width:44rem">Adrián Campanaro: medí tu sitio y medí seis consultores y consultoras de Argentina que le hablan al mismo cliente que vos, con la misma herramienta y el mismo día. Cinco de los seis tienen un atajo para que les escriban. El tuyo no tiene ninguno.</p>
-    <div class="kpi-row"><div class="kpi"><span class="kpi__value">0</span><span class="kpi__label">canales directos en tu sitio</span></div><div class="kpi"><span class="kpi__value">5 de 6</span><span class="kpi__label">comparables con contacto directo</span></div><div class="kpi"><span class="kpi__value">0</span><span class="kpi__label">etiquetas &lt;label&gt; en tu formulario</span></div><div class="kpi"><span class="kpi__value">3,85:1</span><span class="kpi__label">contraste del texto (mín. 4,5)</span></div><div class="kpi"><span class="kpi__value">118 KB</span><span class="kpi__label">tu HTML sin comprimir</span></div></div>
+    <p class="lead" style="color:rgba(255,255,255,.78);max-width:44rem">Adrián Campanaro: medí tu sitio y medí 6 consultores y consultoras de Argentina que le hablan al mismo cliente que vos, con la misma herramienta y el mismo día. 5 de 6 tienen un atajo para que les escriban. El tuyo no tiene ninguno.</p>
+    <div class="kpi-row"><div class="kpi"><span class="kpi__value">0</span><span class="kpi__label">formas de contacto directo</span></div><div class="kpi"><span class="kpi__value">5 de 6</span><span class="kpi__label">comparables con contacto directo</span></div><div class="kpi"><span class="kpi__value">3,85:1</span><span class="kpi__label">contraste del texto (mín. 4,5)</span></div></div>
     <div class="cta-row">
-      <a class="btn btn-brand" href="#propuesta">Ver qué propongo</a>
-      <a class="btn btn-light" href="https://lisandrocacciatore.github.io/AdrianCampanaro/" rel="noopener">Ver la página modelo &nearr;</a>
-      <a class="btn btn-light" href="#evidencia">Ver la evidencia</a>
+      <a class="btn btn-brand" href="#sitio-nuevo">Mirá cómo se vería tu sitio &rarr;</a>
+      <a class="btn btn-light" href="#propuesta">Ver qué propongo</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ B · QUÉ ENCONTRÉ (diagnóstico en su idioma) ══════════════ -->
+<!-- ══════════════ 4 · TU SITIO NUEVO (el resultado, primero) ══════════════ -->
+<section class="band band--soft" id="sitio-nuevo">
+  <div class="wrap">
+    <span class="eyebrow">El resultado, antes que el problema</span>
+    <h2 style="font-size:1.5rem;margin-top:.75rem">Tu sitio nuevo</h2>
+    
+    <p>El rediseño de tu sitio, ya construido y navegable: así se ve con los cambios aplicados.</p>
+    <div class="shot"><iframe class="shot-frame" src="https://lisandrocacciatore.github.io/AdrianCampanaro/" loading="lazy" title="Sitio nuevo de Adrián Campanaro"></iframe></div>
+    <p class="shot-cap">Nuevo — sitio propio con contacto directo en la home, títulos con tu nombre y contraste verificado.</p>
+    <div class="cta-row">
+      <a class="btn btn-brand" href="https://lisandrocacciatore.github.io/AdrianCampanaro/">Abrir el sitio nuevo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 5 · LO QUE ENCONTRÉ (§5) ══════════════ -->
 <section class="band" id="evidencia">
   <div class="wrap">
     <span class="eyebrow">Lo que encontré</span>
     <h2 style="font-size:1.5rem;margin-top:.75rem">4 hallazgos medidos</h2>
     <p>
-      Cada tarjeta trae el número crudo y de dónde sale. Lo que no pude medir, lo digo:
-      no hay una sola afirmación de este documento que no se pueda reproducir.
+      Cada hallazgo va con el número crudo, qué significa para tu trabajo y qué propongo.
+      Lo que no pude medir, lo digo: cada afirmación de este documento se puede reproducir con el comando que tiene al lado.
     </p>
     
     <div class="finding">
       <div class="finding-head">
         <span class="tag tag-medido">[MEDIDO]</span>
         <span class="tag tag-prio-alta">Prioridad alta</span>
-        <span class="finding-title">No tenés ningún atajo para que te escriban</span>
+        <span class="finding-title">1. Cero formas de contacto directo</span>
       </div>
-      <p>Medido sobre el HTML servido: 0 enlaces de WhatsApp (0 apariciones de wa.me), 0 enlaces de agenda online y 0 correos clickeables en la home. El único camino es entrar a «Contacto» y llenar un formulario de cuatro campos. En el mismo relevamiento, 5 de los 6 comparables ofrecen contacto directo: cuatro con WhatsApp y uno con agenda (Calendly).</p>
-      <div class="finding-meta">
-        <span>Impacto estimado: <strong>Tu cliente objetivo decide en cinco minutos entre reuniones; el que tiene que llenar un formulario, lo posterga. Y el que posterga, no vuelve.</strong></span>
-        <span class="tag">[INFERIBLE]</span>
-      </div>
+      <p><strong>Medido:</strong> 0 enlaces wa.me, 0 de agenda online y 0 correos clickeables en la home; 5 de los 6 comparables ofrecen contacto directo.</p>
+      <p><strong>Qué significa:</strong> Quien decide entre reuniones no va a llenar cuatro campos para hablar con vos.</p>
+      <p><strong>Qué propongo:</strong> Base + M1 — contacto directo en la home: WhatsApp con el mensaje ya escrito y correo clickeable.</p>
     </div>
     <div class="finding">
       <div class="finding-head">
         <span class="tag tag-medido">[MEDIDO]</span>
         <span class="tag tag-prio-alta">Prioridad alta</span>
-        <span class="finding-title">Hay gente que directamente no puede usar tu formulario</span>
+        <span class="finding-title">2. Un formulario que muchos no pueden usar</span>
       </div>
-      <p>Los campos no tienen etiqueta: 0 apariciones de &lt;label&gt; en /contacto/. Los textos que se ven son adornos —divs, no etiquetas— y están en inglés («First Name», «Subject», «Message») en un sitio que le habla en argentino.</p>
-      <div class="finding-meta">
-        <span>Impacto estimado: <strong>Quien navega con lector de pantalla escucha campos sin nombre, así que no sabe qué está escribiendo; quien ve la pantalla se encuentra instrucciones en otro idioma.</strong></span>
-        <span class="tag">[INFERIBLE]</span>
-      </div>
+      <p><strong>Medido:</strong> 0 apariciones de &lt;label&gt; en /contacto/: los campos se rotulan con adornos —divs y spans— y en inglés, en un sitio en español.</p>
+      <p><strong>Qué significa:</strong> Hay clientes que no pueden completarlo y no te lo van a avisar: se van.</p>
+      <p><strong>Qué propongo:</strong> Base — formulario con etiquetas reales, en español y asociadas a cada campo.</p>
     </div>
     <div class="finding">
       <div class="finding-head">
         <span class="tag tag-medido">[MEDIDO]</span>
         <span class="tag tag-prio-media">Prioridad media</span>
-        <span class="finding-title">Cuando te buscan en Google, tus páginas internas salen sin tu nombre</span>
+        <span class="finding-title">3. Tus páginas internas salen sin tu nombre</span>
       </div>
-      <p>En las cuatro páginas internas el título queda colgando del separador: «Servicios -», «Quiénes somos -», «- Contacto», «Blog -». El nombre del sitio está vacío, por eso el guion queda suelto. Para ponerlo en contexto, un comparable: luistesolat.com/servicios/ devuelve «Luis Tesolat | Liderazgo que Inspira».</p>
-      <div class="finding-meta">
-        <span>Impacto estimado: <strong>Ese texto es el titular de tu resultado en Google y lo que se lee en la pestaña. Hoy no dice quién sos, y en el lugar de tu marca hay un guion.</strong></span>
-        <span class="tag">[INFERIBLE]</span>
-      </div>
+      <p><strong>Medido:</strong> Los 4 títulos internos quedan colgando del separador: «Servicios -», «Quiénes somos -», «- Contacto», «Blog -».</p>
+      <p><strong>Qué significa:</strong> Buscándote por tu nombre, tu resultado aparece como un guion suelto.</p>
+      <p><strong>Qué propongo:</strong> Base — título y descripción propios en las cinco páginas.</p>
     </div>
     <div class="finding">
       <div class="finding-head">
         <span class="tag tag-medido">[MEDIDO]</span>
         <span class="tag tag-prio-media">Prioridad media</span>
-        <span class="finding-title">El texto se lee incómodo, y tu cliente objetivo tiene entre 45 y 60 años</span>
+        <span class="finding-title">4. El texto cansa la vista</span>
       </div>
-      <p>El gris del cuerpo de texto queda en 3,85:1 sobre blanco y en 3,69:1 sobre el gris de las tarjetas. El mínimo de WCAG 2.1 es 4,5:1. Tus enlaces azules (4,85:1) sí cumplen: el problema es el texto que hay que leer.</p>
-      <div class="finding-meta">
-        <span>Impacto estimado: <strong>Al sol, en un monitor común o con la vista cansada, el párrafo se abandona antes de llegar al final de la página.</strong></span>
-        <span class="tag">[INFERIBLE]</span>
-      </div>
+      <p><strong>Medido:</strong> 3,85:1 sobre blanco y 3,69:1 sobre el gris de las tarjetas; el mínimo de accesibilidad es 4,5:1.</p>
+      <p><strong>Qué significa:</strong> Un texto que cansa la vista pierde justo al lector que más te interesa.</p>
+      <p><strong>Qué propongo:</strong> M2 — contraste del cuerpo llevado al rango de accesibilidad (≥4,5:1) y verificado.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ C · DÓNDE ESTÁS PARADO ══════════════ -->
+<!-- ══════════════ 6-7 · CONTRA COLEGAS ══════════════ -->
 <section class="band band--soft">
   <div class="wrap">
     <span class="eyebrow">Dónde estás parado</span>
     <h2 style="font-size:1.5rem;margin-top:.75rem">Tu categoría, medida el mismo día</h2>
     <p>Medí seis consultores y consultoras de Argentina que le hablan a dueños y ejecutivos, el mismo día y sobre el HTML servido, con la misma herramienta que usé en tu sitio.</p>
-    <table class="compare-table"><thead><tr><th>Sitio</th><th>Estado</th><th>WhatsApp</th><th>Agenda online</th><th>Formulario</th><th>Mail clickeable</th></tr></thead><tbody><tr class="row-client"><td class="">Vos — adriancampanaro.com</td><td class="ok">200 OK</td><td class="bad">0</td><td class="bad">0</td><td class="bad">0</td><td class="bad">0</td></tr><tr class=""><td class="">Luis Tesolat</td><td class="ok">200 OK</td><td class="">sí (2)</td><td class="">no</td><td class="">sí</td><td class="">no</td></tr><tr class=""><td class="">Matías Clarke</td><td class="ok">200 OK</td><td class="">sí</td><td class="">no</td><td class="">sí</td><td class="">sí</td></tr><tr class=""><td class="">Nicolás Cabada</td><td class="ok">200 OK</td><td class="">sí (2)</td><td class="">no</td><td class="">sí</td><td class="">sí</td></tr><tr class=""><td class="">Urbano Consultores</td><td class="ok">200 OK</td><td class="">sí (4)</td><td class="">no</td><td class="">sí</td><td class="">sí</td></tr><tr class=""><td class="">LMM Coaching</td><td class="ok">200 OK</td><td class="">no</td><td class="">sí (Calendly)</td><td class="">sí</td><td class="">sí</td></tr><tr class=""><td class="">Marta Soto Consulting</td><td class="ok">200 OK</td><td class="">no</td><td class="">no</td><td class="">no</td><td class="">no</td></tr></tbody></table>
-    <p class="evsrc">«Formulario» cuenta formularios en el HTML servido. Los dos sitios descartados del set fueron deimon.com.ar (hoy es una agencia de marketing, no consultoría de liderazgo) y crescendaconsultora.com.ar (se corrió a reclutamiento y selección). El peso se mide sobre el HTML sin comprimir, igual en los siete.</p>
+    <table class="compare-table"><thead><tr><th>Sitio</th><th>Estado</th><th>WhatsApp</th><th>Agenda online</th><th>Formulario</th><th>Mail clickeable</th></tr></thead><tbody><tr class="row-client"><td class="" data-col="Sitio">Vos — adriancampanaro.com</td><td class="ok" data-col="Estado">200 OK</td><td class="bad" data-col="WhatsApp">0</td><td class="bad" data-col="Agenda online">0</td><td class="bad" data-col="Formulario">0</td><td class="bad" data-col="Mail clickeable">0</td></tr><tr class=""><td class="" data-col="Sitio">Luis Tesolat</td><td class="ok" data-col="Estado">200 OK</td><td class="" data-col="WhatsApp">2 enlaces</td><td class="" data-col="Agenda online">no</td><td class="" data-col="Formulario">sí</td><td class="" data-col="Mail clickeable">no</td></tr><tr class=""><td class="" data-col="Sitio">Matías Clarke</td><td class="ok" data-col="Estado">200 OK</td><td class="" data-col="WhatsApp">sí</td><td class="" data-col="Agenda online">no</td><td class="" data-col="Formulario">sí</td><td class="" data-col="Mail clickeable">sí</td></tr><tr class=""><td class="" data-col="Sitio">Nicolás Cabada</td><td class="ok" data-col="Estado">200 OK</td><td class="" data-col="WhatsApp">2 enlaces</td><td class="" data-col="Agenda online">no</td><td class="" data-col="Formulario">sí</td><td class="" data-col="Mail clickeable">sí</td></tr><tr class=""><td class="" data-col="Sitio">Urbano Consultores</td><td class="ok" data-col="Estado">200 OK</td><td class="" data-col="WhatsApp">4 enlaces</td><td class="" data-col="Agenda online">no</td><td class="" data-col="Formulario">sí</td><td class="" data-col="Mail clickeable">sí</td></tr><tr class=""><td class="" data-col="Sitio">LMM Coaching</td><td class="ok" data-col="Estado">200 OK</td><td class="bad" data-col="WhatsApp">0</td><td class="" data-col="Agenda online">sí (Calendly)</td><td class="" data-col="Formulario">sí</td><td class="" data-col="Mail clickeable">sí</td></tr><tr class=""><td class="" data-col="Sitio">Marta Soto Consulting</td><td class="ok" data-col="Estado">200 OK</td><td class="bad" data-col="WhatsApp">0</td><td class="" data-col="Agenda online">no</td><td class="" data-col="Formulario">no</td><td class="" data-col="Mail clickeable">no</td></tr></tbody></table>
+    <p class="evsrc">«Formulario» cuenta formularios en el HTML servido y «WhatsApp» cuenta enlaces wa.me; «sí» sin número es al menos uno. Los dos sitios descartados del set fueron deimon.com.ar (hoy es una agencia de marketing, no consultoría de liderazgo) y crescendaconsultora.com.ar (se corrió a reclutamiento y selección). El peso se mide sobre el HTML sin comprimir, igual en los 7.</p>
     <p class="evsrc">Medición propia del 5 de octubre de 2026 · reproducible con: python scripts/medir.py --pares 00-auditoria/pares.txt</p>
     <div class="todo" style="margin-top:1.25rem">
-      <strong>Lo que dice esta tabla, en una línea:</strong>
-      <p style="margin:.5rem 0 0">No es un problema de mensaje: de los siete sitios medidos, el tuyo es el único que pone «inteligencia emocional» en un encabezado. Es un problema de puerta. Entre dos consultores igual de buenos, el que contesta por WhatsApp se queda con el cliente.</p>
+      <strong>Lo que dice esto, en una línea:</strong>
+      <p style="margin:.5rem 0 0">No es un problema de mensaje: de los 7 sitios medidos, el tuyo es el único que pone «inteligencia emocional» en un encabezado. Es un problema de puerta. Entre dos consultores igual de buenos, el que contesta por WhatsApp se queda con el cliente.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ EL NÚMERO QUE SOSTIENE LA PROPUESTA ══════════════ -->
+<!-- ══════════════ 8 · EL NÚMERO QUE SOSTIENE LA PROPUESTA ══════════════ -->
 <section class="band">
   <div class="wrap wrap--tight">
     <div class="callout">
@@ -571,10 +595,20 @@ li { margin-bottom: var(--space-2); }
   </div>
 </section>
 
-<!-- ══════════════ ANTES / DESPUÉS ══════════════ -->
+<!-- ══════════════ CTA INTERMEDIO (§7.3 del spec editorial) ══════════════
+     El lector que ya se convenció no tiene que scrollear hasta el final para actuar. -->
+<section class="band band--soft">
+  <div class="wrap wrap--tight">
+    <p style="font-size:var(--fs-lg);font-weight:600;margin-bottom:1rem">
+      Si querés, hablamos. Y si no, seguí leyendo.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-brand" href="mailto:lisandrocacciatore@gmail.com?subject=Hablemos%20sobre%20mi%20sitio&body=Hola%2C%20quiero%20agendar%20la%20llamada%20de%2020%20minutos.">Agendar 20 minutos &rarr;</a>
+    </div>
+  </div>
+</section>
 
-
-<!-- ══════════════ D · LA PROPUESTA ══════════════ -->
+<!-- ══════════════ 9-11 · BASE, MÓDULOS, ESCENARIOS Y PRECIOS (USD) ══════════════ -->
 <section class="band" id="propuesta">
   <div class="wrap">
     <span class="eyebrow">Qué propongo</span>
@@ -601,28 +635,21 @@ li { margin-bottom: var(--space-2); }
         <div class="total-value" id="total">USD 350</div>
         <div class="total-list" id="list">Sitio base</div>
       </div>
-      <a class="btn btn-light no-print" href="mailto:lisandrocacciatore@gmail.com?subject=Propuesta%20-%20Adrián%20Campanaro&body=Hola%20Adrián%2C%20me%20interesa%20avanzar%20con%3A%20">
-        Responder esta propuesta
-      </a>
+      <a class="btn btn-light no-print" href="mailto:lisandrocacciatore@gmail.com?subject=Acepto%20la%20propuesta%20-%20Adrián%20Campanaro&body=Hola%2C%20acepto%20la%20propuesta.%20Arrancamos.">Aceptar propuesta &rarr;</a>
     </div>
 
     <h3 style="margin-top:2rem">Escenarios, para no decidir todo de una</h3>
-    <ul><li><strong>Entrada:</strong> Base sola — <strong>USD 350</strong></li><li><strong>Intermedio:</strong> Base + M1 + M2 — <strong>USD 620</strong></li><li><strong>Recomendado:</strong> Base + M1 + M2 + M3 — <strong>USD 770</strong></li><li><strong>Pack completo:</strong> Base + los 5 módulos — <strong>USD 900</strong></li><li><strong>Pack con descuento:</strong> Pack completo con 15% de descuento — <strong>USD 765</strong></li></ul>
-
-    <h3>Cómo se ubica el número</h3>
-    <p>No publicás tarifas y no voy a inventarlas: la conversión a pesos queda [NO VERIFICADO]. El número se ubica al revés — si una sola consulta tuya vale más que el bloque más caro, ese bloque se pagó con la primera. Vos sabés cuánto vale tu hora; yo no.</p>
+    <ul><li><strong>Entrada:</strong> Base sola — <strong>USD 350</strong></li><li><strong>Intermedio:</strong> Base + M1 + M2 — <strong>USD 620</strong></li><li><strong>Recomendado:</strong> Base + M1 + M2 + M3 — <strong>USD 770</strong></li><li><strong>Pack completo:</strong> Base + los 5 módulos — <strong>USD 900</strong></li><li><strong>Pack con descuento:</strong> Pack completo con 15 % de descuento — <strong>USD 765</strong></li></ul>
+    <p class="evsrc">Recomendado para tu caso: Base + M1 + M2 + M3 = USD 770.</p>
+    <p class="evsrc">Todos los precios están en dólares. No hay costos mensuales de plataforma ni licencias recurrentes.
+       La propuesta es válida por 30 días desde el 5 de octubre de 2026.</p>
   </div>
 </section>
 
-<!-- ══════════════ QUÉ NO INCLUYE ══════════════ -->
+<!-- ══════════════ 12-13 · QUÉ NO INCLUYE / LO QUE NECESITO ══════════════ -->
 <section class="band band--soft">
   <div class="wrap">
-    <div class="grid-2">
-      <div>
-        <span class="eyebrow">Para que no haya sorpresas</span>
-        <h2 style="font-size:1.25rem;margin-top:.75rem">Qué no incluye</h2>
-        <ul style="font-size:var(--fs-sm)"><li>Rediseño de marca: logo, paleta y tipografías se respetan como están</li><li>Reescritura de tus textos: el mensaje ya funciona, no se toca</li><li>Producción de contenido nuevo para el blog</li><li>Campañas publicitarias pagas ni gestión de redes sociales</li><li>Mantenimiento mensual obligatorio: el sitio queda tuyo y funciona sin cuota</li><li>Carga de casos o testimonios que hoy no existan con autorización firmada</li></ul>
-      </div>
+    <div class="wrap--tight">
       <div>
         <span class="eyebrow">Lo que necesito de vos</span>
         <h2 style="font-size:1.25rem;margin-top:.75rem">Dos datos que no puedo inventar</h2>
@@ -634,7 +661,7 @@ li { margin-bottom: var(--space-2); }
   </div>
 </section>
 
-<!-- ══════════════ E · PRÓXIMO PASO ══════════════ -->
+<!-- ══════════════ 14 · PRÓXIMO PASO ══════════════ -->
 <section class="band">
   <div class="wrap">
     <span class="eyebrow">Próximo paso</span>
@@ -642,19 +669,59 @@ li { margin-bottom: var(--space-2); }
     <p>No hace falta que decidas nada por mensaje. Necesito confirmar dos cosas que no puedo ver desde afuera: qué plugin gestiona hoy tu formulario, para dejar las etiquetas accesibles sin tocar el tema, y a qué número querés que apunte el botón de WhatsApp.</p>
     <ol class="step-list"><li>Confirmar dos datos que no puedo ver desde afuera: qué plugin gestiona hoy el formulario y a qué número querés que apunte el botón de WhatsApp.</li><li>Llamada de 20 minutos para revisar los 4 hallazgos y elegir qué bloque activar primero.</li><li>Aplicación del bloque elegido, con publicación de prueba en un enlace que puedas abrir desde el celular.</li><li>Remedición de lo aplicado, entrega documentada y 30 días de soporte.</li></ol>
     <div class="cta-row">
-      <a class="btn btn-ink" href="mailto:lisandrocacciatore@gmail.com?subject=Propuesta%20-%20Adrián%20Campanaro&body=Hola%20Adrián%2C%20quiero%20avanzar%20con%3A%20">Responder por correo</a>
-      
+      <a class="btn btn-brand" href="mailto:lisandrocacciatore@gmail.com?subject=Hablemos%20sobre%20mi%20sitio&body=Hola%2C%20quiero%20agendar%20la%20llamada%20de%2020%20minutos.">Agendar llamada de 20 minutos &rarr;</a>
+      <a class="btn btn-ink" href="mailto:lisandrocacciatore@gmail.com?subject=Acepto%20la%20propuesta%20-%20Adrián%20Campanaro&body=Hola%2C%20acepto%20la%20propuesta.%20Arrancamos.">Aceptar propuesta &rarr;</a>
+      <a class="btn btn-light" href="https://lisandrocacciatore.github.io/AdrianCampanaro/" rel="noopener">Ver la página modelo &nearr;</a>
     </div>
-    <p style="margin-top:1rem"><small>Si preferís que no te escriba más, respondé «no gracias» y no vuelvo a contactarte. Sin insistencia.</small></p>
+    <p style="margin-top:1rem"><small>Si no te sirve el mail, respondé este mensaje con «dale, hablemos» y coordinamos.
+       Si preferís que no te escriba más, respondé «no gracias» y no vuelvo a contactarte. Sin insistencia.</small></p>
   </div>
 </section>
 
-<!-- ══════════════ ALCANCE ══════════════ -->
+<!-- ══════════════ 15 · LÍMITES ══════════════
+     §3.15 del spec v2.0 pide «Alcance de esta revisión»; §7.2 del spec editorial pide
+     consolidar ahí los tres límites (medido / no medido / no incluido). Un solo bloque
+     cumple las dos cosas: antes eran tres secciones que declaraban límites por separado. -->
 <section class="band band--soft">
   <div class="wrap wrap--tight">
     <div class="scope">
-      <div class="scope-label">Alcance de esta revisión — qué miré y qué no</div>
-      <ul><li><span class="yes">✓</span> Medí el HTML servido de adriancampanaro.com el 5 de octubre de 2026, con la misma herramienta que usé en los seis comparables (scripts/medir.py, incluida en este repositorio).</li><li><span class="yes">✓</span> Comparé seis consultores y consultoras de Argentina, medidos el mismo día y con el mismo método.</li><li><span class="yes">✓</span> Calculé el contraste del texto con la fórmula de luminancia relativa de WCAG 2.1.</li><li><span class="no">✗</span> No tengo acceso a tu analítica: no sé cuántas consultas se pierden hoy, y no lo estimo.</li><li><span class="no">✗</span> No evalué la calidad de lo que entrega cada comparable, ni sus precios: ninguno los publica.</li><li><span class="no">✗</span> No revisé tu perfil de LinkedIn ni tus otras redes.</li></ul>
+      <div class="scope-label">Alcance de esta revisión — límites de este documento</div>
+      <div class="sec-sub">Lo que medí</div>
+      <ul><li><span class="yes">✓</span> Medí el HTML servido de adriancampanaro.com el 5 de octubre de 2026, con la misma herramienta que usé en los seis comparables (scripts/medir.py, incluida en este repositorio).</li><li><span class="yes">✓</span> Comparé seis consultores y consultoras de Argentina, medidos el mismo día y con el mismo método.</li><li><span class="yes">✓</span> Calculé el contraste del texto con la fórmula de luminancia relativa de WCAG 2.1.</li></ul>
+      <div class="sec-sub">Lo que no pude medir</div>
+      <ul><li><span class="no">✗</span> No tengo acceso a tu analítica: no sé cuántas consultas se pierden hoy, y no lo estimo.</li><li><span class="no">✗</span> No evalué la calidad de lo que entrega cada comparable, ni sus precios: ninguno los publica.</li><li><span class="no">✗</span> No revisé tu perfil de LinkedIn ni tus otras redes.</li></ul>
+      <div class="sec-sub">Lo que no incluye la propuesta</div>
+      <ul><li>Rediseño de marca: logo, paleta y tipografías quedan como están</li><li>Reescritura de tus textos: el mensaje ya funciona, se respeta</li><li>Producción de contenido nuevo para el blog</li><li>Campañas pagas y gestión de redes sociales</li><li>Mantenimiento mensual obligatorio: el sitio queda tuyo y funciona sin cuota</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 16 · ACEPTACIÓN Y FIRMA ══════════════ -->
+<section class="band">
+  <div class="wrap wrap--tight">
+    <span class="eyebrow">Aceptación</span>
+    <h2 style="font-size:1.25rem;margin-top:.75rem">Si estás de acuerdo, arrancamos</h2>
+    <p>
+      Con que me respondas «de acuerdo» ya alcanza para empezar: cargamos tus datos reales
+      y publicamos el sitio en tu dominio. Si querés dejarlo firmado, imprimí esta página.
+    </p>
+    <div class="sig-grid">
+      <div class="sig-col">
+        <div class="sig-role">Por el consultor</div>
+        <div class="sig-line"></div>
+        <div class="sig-name">Lisandro Cacciatore</div>
+        <div class="sig-detail">lisandrocacciatore@gmail.com</div>
+      </div>
+      <div class="sig-col">
+        <div class="sig-role">Por el cliente</div>
+        <div class="sig-line"></div>
+        <div class="sig-name">Adrián Campanaro</div>
+        <div class="sig-detail">Aclaración y firma</div>
+        <div class="sig-detail">Fecha: ____ / ____ / ________</div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-ink" href="mailto:lisandrocacciatore@gmail.com?subject=Acepto%20la%20propuesta%20-%20Adrián%20Campanaro&body=Hola%2C%20acepto%20la%20propuesta.%20Arrancamos.">Aceptar propuesta &rarr;</a>
     </div>
   </div>
 </section>
@@ -667,9 +734,6 @@ li { margin-bottom: var(--space-2); }
 </footer>
 
 <script>
-  window.TIPO_CAMBIO = 0;
-  window.UNIDAD = "reuniones";
-
   var BASE = 350;
   var MODULES = [{"id": "m1", "code": "M1", "icon": "chat", "title": "Contacto directo por WhatsApp", "price": 120, "short": "El atajo que hoy no existe, con el mensaje ya escrito según la sección.", "bullets": ["Botón fijo abajo a la derecha, en todas las páginas", "El texto del mensaje cambia según dónde está la persona (servicios, quién soy, contacto)", "Tiempo de respuesta declarado, para que no quede la duda de si hay alguien del otro lado", "Abre en un clic desde el celular, sin copiar el número"]}, {"id": "m2", "code": "M2", "icon": "accessibility_new", "title": "Terminación y accesibilidad verificada", "price": 150, "short": "Que cualquiera pueda usar el formulario y leer el sitio sin esfuerzo.", "bullets": ["Etiquetas reales, en español y asociadas a cada campo del formulario", "Contraste del cuerpo llevado al rango de accesibilidad (4,5:1 o más)", "Descripciones reales en las imágenes que hoy tienen texto de relleno", "Foco de teclado visible: se puede navegar sin mouse"]}, {"id": "m3", "code": "M3", "icon": "speed", "title": "Peso y velocidad", "price": 150, "short": "Menos espera en celular, medido antes y después.", "bullets": ["Agrupar y minificar los estilos", "Recortar el CSS del maquetador a lo que cada página realmente usa", "Medición antes y después con el peso transferido, no con impresiones", "Sin plugins nuevos ni cambios de tema"]}, {"id": "m4", "code": "M4", "icon": "menu_book", "title": "Blog conectado al camino de contacto", "price": 50, "short": "El blog ya existe y está armado: se lo conecta y se lo deja indexable.", "bullets": ["Enlace al blog desde cada página de servicio", "Títulos y descripciones propios por artículo", "Indexable: sitemap y datos estructurados de artículo", "Sin reescribir tus textos"]}, {"id": "m5", "code": "M5", "icon": "verified", "title": "Verificación y entrega documentada", "price": 80, "short": "No te quedás con mi palabra: te quedás con la medición.", "bullets": ["Remedición de todo lo del bloque de terminación, después de aplicado", "Comprobación en un celular real", "Documento corto con qué se cambió y con qué comando se verifica cada cosa", "Sin costo mensual ni licencia"]}];
   var selected = {};
@@ -723,14 +787,6 @@ li { margin-bottom: var(--space-2); }
 
     document.getElementById('list').textContent =
       codes.length ? 'Base + ' + codes.join(' + ') : 'Sitio base';
-
-    var eq = document.getElementById('equiv');
-    if (eq) {
-      var tc = Number(window.TIPO_CAMBIO || 0);
-      if (tc) {
-        eq.textContent = '≈ AR$ ' + Math.round(total * tc).toLocaleString('es-AR');
-      }
-    }
   }
 
   render();
