@@ -24,10 +24,9 @@
   "modelo": {
     "url": "https://lisandrocacciatore.github.io/AdrianCampanaro/",
     "titulo": "Página modelo",
-    "bajada": "El rediseño de tu sitio, ya construido y navegable: así se ve con los cambios aplicados.",
-    "cta": "Ver la página modelo",
-    "caption": "Nuevo — sitio propio con contacto directo en la home, títulos con tu nombre y contraste verificado.",
-    "captura": "02-sitio/capturas/nuevo-desktop.png"
+    "bajada": "El rediseño ya está construido y navegable. No es un boceto.",
+    "cta": "Abrir el sitio nuevo",
+    "invitacion": "Abrilo y recorrélo: es tu sitio, con contacto directo en la home, títulos con tu nombre y el contraste corregido."
   },
   "salida": {
     "slug": "campanaro"
