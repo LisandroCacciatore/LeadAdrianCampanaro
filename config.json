@@ -14,7 +14,7 @@
     "email": "lisandrocacciatore@gmail.com"
   },
   "branding": {
-    "colorPrimario": "#4169e1",
+    "colorPrimario": "",
     "logo": "",
     "firma": ""
   },
@@ -42,6 +42,11 @@
     ]
   },
   "propuesta": {
+    "heroStat": {
+      "valor": "5 de 6",
+      "label": "comparables con contacto directo",
+      "caption": "Muestra sobre 6 consultores y consultoras de Argentina, relevados el mismo día y sobre el HTML servido."
+    },
     "saludo": "Adrián",
     "heroTitulo": "Cinco de los seis ofrecen una forma directa de escribirles.<br>El tuyo, ninguna.",
     "heroLead": "Adrián Campanaro: medí tu sitio y medí 6 consultores y consultoras de Argentina que le hablan al mismo cliente que vos, con la misma herramienta y el mismo día. 5 de 6 tienen un atajo para que les escriban. El tuyo no tiene ninguno.",
