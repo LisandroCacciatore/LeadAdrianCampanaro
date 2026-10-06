@@ -165,14 +165,12 @@ def scenarios(base: int, modulos: list) -> list:
     recs = [m for m in modulos if m.get("recomendado")] or modulos[:3]
     prices = [int(m.get("price", 0)) for m in modulos]
     total = base + sum(prices)
-    pack = round(total * 0.85 / 5) * 5
     codes = [m.get("code", "") for m in recs]
     return [
         ("Entrada", "Base sola", base),
         ("Recomendado", f"Base + {len(codes)} add-ons ({', '.join(codes)})",
          base + sum(int(m.get("price", 0)) for m in recs)),
         ("Pack completo", f"Base + los {len(modulos)} add-ons del catálogo", total),
-        ("Pack con descuento", "Pack completo con 15 % de descuento", pack),
     ]
 
 

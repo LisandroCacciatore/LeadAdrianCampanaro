@@ -150,14 +150,12 @@ def scenarios(base: int, modulos: list) -> list:
     combo2 = base + (prices[0] if len(prices) > 0 else 0) + (prices[1] if len(prices) > 1 else 0)
     combo3 = combo2 + (prices[2] if len(prices) > 2 else 0)
     total = base + sum(prices)
-    pack = round(total * 0.85 / 5) * 5
     codes = [m.get("code", "") for m in modulos]
     return [
         ("Entrada", "Base sola", base),
         ("Intermedio", f"Base + {codes[0]} + {codes[1]}", combo2),
         ("Recomendado", f"Base + {codes[0]} + {codes[1]} + {codes[2]}", combo3),
         ("Pack completo", f"Base + los {len(modulos)} módulos", total),
-        ("Pack con descuento", "Pack completo con 15 % de descuento", pack),
     ]
 
 
